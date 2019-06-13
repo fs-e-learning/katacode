@@ -1,0 +1,32 @@
+{
+    "title": "アプリケーションのデプロイ",
+    "description": "Kubernetes クラスタにアプリケーションをデプロイしてみましょう。",
+    "details": {
+      "steps": [
+        {
+          "title": "Step 1 - kubectl の基本",
+          "text": "step1.md"
+        },
+        {
+          "title": "Step 2 - アプリケーションのデプロイ",
+          "text": "step2.md"
+        },
+        {
+          "title": "Step 3 - アプリケーションの確認",
+          "text": "step3.md"
+        }
+      ],
+      "intro": {
+        "text": "intro.md"
+      },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "environment": {
+      "uilayout": "terminal"
+    },
+    "backend": {
+      "imageid": "kubernetes"
+    }
+  }
