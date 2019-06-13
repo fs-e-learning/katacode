@@ -6,7 +6,7 @@
         {
           "title": "Step 1 - kubectl の基本",
           "text": "step1.md",
-          "courseData": ["launch.sh"]
+          "data": ["launch.sh"]
         },
         {
           "title": "Step 2 - アプリケーションのデプロイ",
