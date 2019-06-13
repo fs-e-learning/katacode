@@ -1,0 +1,24 @@
+{
+    "title": "クラスタの作成",
+    "description": "minikubeを用いて Kubernetes クラスタを作成してみましょう。",
+    "details": {
+      "steps": [
+        {
+          "title": "Step 1 - クラスタの起動",
+          "text": "step1.md"
+        }
+      ],
+      "intro": {
+        "text": "intro.md"
+      },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "environment": {
+      "uilayout": "terminal"
+    },
+    "backend": {
+      "imageid": "kubernetes"
+    }
+  }

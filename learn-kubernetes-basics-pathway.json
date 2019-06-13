@@ -1,0 +1,37 @@
+{
+    "title": "Kubernetes概要チュートリアル",
+    "description": "Kubernetes のほんの触りだけをささっと体験してみましょう",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "create-cluster",
+        "title": "クラスタの作成",
+        "description": "General purpose environment"
+      },
+      {
+        "course_id": "deploy-app",
+        "title": "アプリケーションのデプロイ",
+        "description": "General purpose Docker environment"
+      },
+      {
+        "course_id": "explore-app",
+        "title": "アプリケーションはどうなっているか？",
+        "description": "Two-node Docker cluster designed for teaching Swarm"
+      },
+      {
+        "course_id": "scale-app",
+        "title": "アプリケーションのスケール",
+        "description": "Single node Kubernetes cluster configured using Kubeadm"
+      },
+      {
+        "course_id": "update-app",
+        "title": "アプリケーションのアップデート",
+        "description": "Multi node Kubernetes cluster configured using Kubeadm"
+      },
+      {
+        "course_id": "minikube",
+        "title": "Minikube",
+        "description": "Use Minikube to help explain Kubernetes"
+      }
+    ]
+  }
