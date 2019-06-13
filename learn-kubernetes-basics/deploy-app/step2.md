@@ -17,7 +17,7 @@ kubectl runコマンドを使用して、Kubernetesで最初のアプリを実�
 
 展開を一覧表示するには、`get deployments`コマンドを使用します。
 
-`get deployments`{{execute}}
+`kubectl get deployments`{{execute}}
 
 アプリの単一インスタンスを実行している Deployment が1つあることがわかります。
 インスタンスは、ノードのDockerコンテナ内で実行されています。

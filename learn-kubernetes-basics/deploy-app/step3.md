@@ -26,11 +26,7 @@ API Server は、ポッド名に基づいて各ポッドのエンドポイント
 
 最初にPodの名前を取得する必要があります。ここでは環境変数POD_NAMEに格納します。
 
-```bash
-export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
-echo 'ポッド名は'" $POD_NAME "'です。'
-```
-{{execute T1}}
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}'); echo 'ポッド名は'" $POD_NAME "'です。'`{{execute T1}}
 
 URLはPodのAPIへのルートです。
 
