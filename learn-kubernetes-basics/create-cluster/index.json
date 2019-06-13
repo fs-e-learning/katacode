@@ -6,6 +6,14 @@
         {
           "title": "Step 1 - クラスタの起動",
           "text": "step1.md"
+        },
+        {
+          "title": "Step 2 - クラスタのバージョン",
+          "text": "step2.md"
+        },
+        {
+          "title": "Step 3 - クラスタの詳細",
+          "text": "step3.md"
         }
       ],
       "intro": {
