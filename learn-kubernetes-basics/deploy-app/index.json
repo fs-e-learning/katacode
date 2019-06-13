@@ -17,7 +17,8 @@
         }
       ],
       "intro": {
-        "text": "intro.md"
+        "text": "intro.md",
+        "courseData": "sleep 1; launch.sh"
       },
       "finish": {
         "text": "finish.md"
