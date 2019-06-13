@@ -5,8 +5,7 @@
       "steps": [
         {
           "title": "Step 1 - kubectl の基本",
-          "text": "step1.md",
-          "courseData": ["bash", "-c", "sleep 1; launch.sh"]
+          "text": "step1.md"
         },
         {
           "title": "Step 2 - アプリケーションのデプロイ",
