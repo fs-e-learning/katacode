@@ -9,20 +9,16 @@
       },
       "steps": [
         {
-          "title": "Step 1 - kubectl の基本",
+          "title": "Step 1 - Deployment のスケール",
           "text": "step1.md"
         },
         {
-          "title": "Step 2 - アプリケーションのデプロイ",
+          "title": "Step 2 - ロードバランシング",
           "text": "step2.md"
         },
         {
-          "title": "Step 3 - アプリケーションの確認",
+          "title": "Step 3 - スケールダウン",
           "text": "step3.md"
-        },
-        {
-          "title": "Step 4 - コンテナでのコマンドの実行",
-          "text": "step4.md"
         }
       ],
       "finish": {
@@ -42,6 +38,6 @@
       "uilayout": "terminal"
     },
     "backend": {
-      "imageid": "kubernetes"
+      "imageid": "minikube"
     }
   }

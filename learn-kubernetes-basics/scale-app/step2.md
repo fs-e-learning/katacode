@@ -1,19 +1,16 @@
-Podは孤立したプライベートネットワークで実行されていることを思い出してください。
 
-したがって、Podをデバッグして対話できるように、それらへのプロキシアクセスが必要です。
-これを行うには、kubectl proxyコマンドを使用して2番目の端末ウィンドウでプロキシを実行します。
+Service がトラフィックを負荷を分散していることを確認しましょう。
 
-下のコマンドをクリックして新しい端末を自動的に開き、プロキシを実行します。
+公開されたIPとポートを見つけるために、以前学んだように descrive services を使うことができます。
 
-`kubectl proxy`{{execute T2}}
+`kubectl describe services/kubernetes-bootcamp`{{execute}}
 
-繰り返しになりますが、Podの名前を取得し、プロキシを介してそのPodに直接問い合わせます。
-Pod名を取得してPOD_NAME環境変数に保存するには
+環境変数NODE_PORT に Node のポート番号を設定します。
 
-`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}');  echo 'Pod の名前は:'" $POD_NAME"`{{execute T1}}
+`export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}') ; echo NODE_PORT=$NODE_PORT`{{execute}}
 
-アプリケーションの出力を確認するには、curlリクエストを実行してください。
+次に、公開されている IPとポートに `curl` で アクセスします。 コマンドを複数回実行します。
 
-`curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/`{{execute T1}}
+`curl $(minikube ip):$NODE_PORT`{{execute}}
 
-URLはPodのAPIへのルートです。
+リクエストごとに異なるポッドにヒットしました。これは、ロードバランシングが機能していることを示しています。

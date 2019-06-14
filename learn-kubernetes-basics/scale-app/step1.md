@@ -1,15 +1,35 @@
-前のシナリオでデプロイしたアプリケーションが実行されていることを確認しましょう。 kubectl getコマンドを使用して既存のPodを探します。
 
-`kubectl get pods`{{execute}}
+Deployment をリストするには、`get deployments` コマンドを使用します。`kubectl get deployments`{{execute}}
 
-ポッドが実行されていない場合は、もう一度 get pods してみてください。
+Pod が1つあるはずです。
+そうでない場合は、コマンドを再実行してください。
 
-次に、そのPod内にどのコンテナがあるのか​​、そしてそれらのコンテナを構築するためにどのイメージが使用されるのかを表示するために、`describe pods` コマンドを実行します。
+DESIREDは、構成された数のレプリカを表示しています
 
-`kubectl describe pods`{{execute}}
+CURRENTは、現在実行中のレプリカの数を示します。
 
-ここでは、Podのコンテナに関する詳細が表示されます。IPアドレス、使用されているポート、およびPodのライフサイクルに関連するイベントのリストです。
+UP-TO-DATEは、目的の（構成済み）状態に一致するように更新されたレプリカの数です。
 
-describeコマンドの出力は広範囲にわたり、まだ説明していないいくつかの概念を網羅していますが、心配しないでください。これらは、このブートキャンプの終わりまでには一般的になるでしょう。
+AVAILABLEは、ユーザーにとって実際に使用可能なレプリカの数を示します。
 
-注：describeコマンドを使用すると、ほとんどのkubernetesプリミティブ（ノード、ポッド、デプロイメント）に関する詳細情報を取得できます。記述出力は、人間が読めるように設計されており、スクリプト化されることはありません。
+次に、Deployment を4つのレプリカにスケールしてみましょう。
+`kubectl scale` コマンドを使用し、その後にデプロイメントタイプ、名前、および必要なインスタンス数を指定します。
+
+`kubectl scale deployments/kubernetes-bootcamp --replicas=4`{{execute}}
+
+もう一度 Deployments を一覧表示するには、`get deployments` を使用します。
+
+`kubectl get deployments`{{execute}}
+
+変更が適用され、利用可能なアプリケーションのインスタンスが4つあります。
+次に、Podの数が変わったかどうかを確認しましょう。
+
+`kubectl get pods -o wide`{{execute}}
+
+異なるIPアドレスを持つ4つのPodがあります。
+変更は Deploymentイベントログに記録されます。
+これを確認するには、`describe` コマンドを使用します。
+
+`kubectl describe deployments/kubernetes-bootcamp`{{execute}}
+
+このコマンドの出力で、現在4つのレプリカがあることを確認することもできます。

@@ -1,6 +1,14 @@
-アプリケーションが通常出力(stdout)に送信するものはすべて、Pod内のコンテナのログになります。
-`kubectl logs` コマンドを使用してこれらのログを取得できます。
 
-`kubectl logs $POD_NAME`{{execute T1}}
+Service を 2つのレプリカに縮小するには、もう一度 `scale` コマンドを実行します。
 
-注意：ポッド内にはコンテナが1つしかないため、コンテナ名を指定する必要はありません。
+`kubectl scale deployments/kubernetes-bootcamp --replicas=2`{{execute}}
+
+`get deployments` コマンドで変更が適用されたかどうかを確認するため Deployments をリストします。
+
+`kubectl get deployments`{{execute}}
+
+レプリカの数は 2 に減少しました。`get pods` で Pods の数をリストします。
+
+`kubectl get pods -o wide`{{execute}}
+
+2つの Pod が終了したことが STATUS=Terminating により確認できました。
