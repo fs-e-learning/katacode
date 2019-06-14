@@ -24,7 +24,8 @@ kubernetes-bootcamp という名前の実行中のサービスが作成されま
 
 ノードポートの値がを環境変数NODE_PORTにセットします。
 
-`export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}') ; echo NODE_PORT=$NODE_PORT`{{execute}}
+`export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+echo NODE_PORT=$NODE_PORT`{{execute}}
 
 これで、curl、ノードのIP、および外部に公開されているポートを使用して、アプリがクラスタの外部に公開されていることをテストできます。
 

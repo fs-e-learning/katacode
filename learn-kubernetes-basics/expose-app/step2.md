@@ -14,7 +14,8 @@ Deploy によって、自動的にPodのラベルが作成されています。
 
 ポッドの名前を取得し、それをPOD_NAME環境変数に保存します。
 
-`export POD_NAME=$(kubectl get pods -o go-template --template '{{range.items}} {{.metadata.name}} {{"\n"}} {{end}}') ;  echo 'Podの名前：'"$POD_NAME"`{{execute}}
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range.items}} {{.metadata.name}} {{"\n"}} {{end}}')
+echo 'Podの名前：'"$POD_NAME"`{{execute}}
 
 新しいラベルを適用するには、`label` コマンドに続けてオブジェクトタイプ、オブジェクト名、新しいラベルを使います。
 

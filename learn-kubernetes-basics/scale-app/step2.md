@@ -7,7 +7,8 @@ Service がトラフィックを負荷を分散していることを確認しま
 
 環境変数NODE_PORT に Node のポート番号を設定します。
 
-`export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}') ; echo NODE_PORT=$NODE_PORT`{{execute}}
+`export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+echo NODE_PORT=$NODE_PORT`{{execute}}
 
 次に、公開されている IPとポートに `curl` で アクセスします。 コマンドを複数回実行します。
 

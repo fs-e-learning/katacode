@@ -27,7 +27,8 @@ API Server は、ポッド名に基づいて各ポッドのエンドポイント
 最初にPodの名前を `kubectl get pods`{{execute T1}} を用いて取得する必要があります。
 ここでは環境変数POD_NAMEに格納します。
 
-`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}');   echo 'ポッド名は'" $POD_NAME "'です。'`{{execute T1}}
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo 'ポッド名は'" $POD_NAME "'です。'`{{execute T1}}
 
 これで Pod で実行中のアプリケーション HTTP リクエストできます。
 

@@ -10,7 +10,8 @@ Podは孤立したプライベートネットワークで実行されている�
 繰り返しになりますが、Podの名前を取得し、プロキシを介してそのPodに直接問い合わせます。
 Pod名を取得してPOD_NAME環境変数に保存するには
 
-`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}');  echo 'Pod の名前は:'" $POD_NAME"`{{execute T1}}
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo 'Pod の名前は:'" $POD_NAME"`{{execute T1}}
 
 アプリケーションの出力を確認するには、curlリクエストを実行してください。
 
