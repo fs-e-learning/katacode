@@ -1,6 +1,6 @@
 {
-    "title": "アプリケーションはどうなっているか",
-    "description": "Pod のアプリケーションを覗いてみよう。",
+    "title": "アプリケーションのスケール",
+    "description": "アプリケーションをスケールしてみよう。",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -9,15 +9,15 @@
       },
       "steps": [
         {
-          "title": "Step 1 - アプリケーション構成の確認",
+          "title": "Step 1 - kubectl の基本",
           "text": "step1.md"
         },
         {
-          "title": "Step 2 - アプリケーションの表示",
+          "title": "Step 2 - アプリケーションのデプロイ",
           "text": "step2.md"
         },
         {
-          "title": "Step 3 - コンテナログの確認",
+          "title": "Step 3 - アプリケーションの確認",
           "text": "step3.md"
         },
         {

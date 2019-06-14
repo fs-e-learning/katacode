@@ -6,32 +6,32 @@
       {
         "course_id": "create-cluster",
         "title": "クラスタの作成",
-        "description": "General purpose environment"
+        "description": "minikubeを用いて Kubernetes クラスタを作成してみよう"
       },
       {
         "course_id": "deploy-app",
         "title": "アプリケーションのデプロイ",
-        "description": "General purpose Docker environment"
+        "description": "Kubernetes クラスタにアプリケーションをデプロイしてみよう"
       },
       {
         "course_id": "explore-app",
         "title": "アプリケーションはどうなっているか？",
-        "description": "Two-node Docker cluster designed for teaching Swarm"
+        "description": "Pod のアプリケーション内を覗いてみよう"
+      },
+      {
+        "course_id": "expose-app",
+        "title": "アプリケーションの公開",
+        "description": "Service を使ってアプリケーションを公開してみよう"
       },
       {
         "course_id": "scale-app",
         "title": "アプリケーションのスケール",
-        "description": "Single node Kubernetes cluster configured using Kubeadm"
+        "description": "アプリケーションをスケールしてみよう"
       },
       {
         "course_id": "update-app",
         "title": "アプリケーションのアップデート",
-        "description": "Multi node Kubernetes cluster configured using Kubeadm"
-      },
-      {
-        "course_id": "minikube",
-        "title": "Minikube",
-        "description": "Use Minikube to help explain Kubernetes"
+        "description": "アプリケーションをアップデートしてみよう"
       }
     ]
   }
