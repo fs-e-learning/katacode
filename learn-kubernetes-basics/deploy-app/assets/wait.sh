@@ -26,4 +26,4 @@ show_progress()
 }
 
 sleep 1
-show_progress 'クラスタ起動中。少し時間がかかる場合があります。' '準備完了！ お待たせしました。'
+show_progress 'Kubernetes Cluster Stating... wait a minutes...' 'OK! Done.'
