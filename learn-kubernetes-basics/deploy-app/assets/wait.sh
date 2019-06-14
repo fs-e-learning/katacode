@@ -26,4 +26,4 @@ show_progress()
 }
 
 sleep 1
-show_progress 'Kubernetes Cluster Stating... wait a minutes...' 'OK! Done.'
+show_progress 'Kubernetes Cluster Starting... wait a minutes...' 'OK! Done.'
