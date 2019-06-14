@@ -1,0 +1,43 @@
+{
+    "title": "アプリケーションのアップデート",
+    "description": "アプリケーションをアップデートしてみよう。",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "courseData": "bg.sh",
+        "code": "fg.sh"
+      },
+      "steps": [
+        {
+          "title": "Step 1 - アプリケーションのバージョンアップ",
+          "text": "step1.md"
+        },
+        {
+          "title": "Step 2 - アップデートの確認",
+          "text": "step2.md"
+        },
+        {
+          "title": "Step 3 - アップデートのロールバック",
+          "text": "step3.md"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      },
+      "assets": {
+        "host01": [
+          {
+            "file": "wait.sh",
+            "target": "/usr/local/bin/",
+            "chmod": "+x"
+          }
+        ]
+      }
+    },
+    "environment": {
+      "uilayout": "terminal"
+    },
+    "backend": {
+      "imageid": "minikube"
+    }
+  }
