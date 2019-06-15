@@ -21,11 +21,11 @@
       },
       "finish": {
         "text": "finish.md"
+        "credits": ""
       }
     },
     "environment": {
       "uilayout": "terminal",
-      "hidefinish": true
     },
     "backend": {
       "imageid": "minikube"
