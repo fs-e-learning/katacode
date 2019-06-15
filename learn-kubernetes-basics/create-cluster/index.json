@@ -18,14 +18,10 @@
       ],
       "intro": {
         "text": "intro.md"
-      },
-      "finish": {
-        "text": "finish.md"
       }
     },
     "environment": {
-      "uilayout": "terminal",
-      "hidefinish": true
+      "uilayout": "terminal"
     },
     "backend": {
       "imageid": "minikube"
