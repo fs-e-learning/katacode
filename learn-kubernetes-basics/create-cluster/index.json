@@ -20,8 +20,8 @@
         "text": "intro.md"
       },
       "finish": {
-        "text": "finish.md"
-        "credits": ""
+        "text": "finish.md",
+        "credits": " "
       }
     },
     "environment": {
