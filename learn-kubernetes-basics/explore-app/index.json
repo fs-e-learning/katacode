@@ -39,8 +39,7 @@
       }
     },
     "environment": {
-      "uilayout": "terminal",
-      "hidefinish": true
+      "uilayout": "terminal"
     },
     "backend": {
       "imageid": "kubernetes"
